@@ -8,7 +8,7 @@ const Service = ({ service }) => {
 
     return (
         <div className='col-sm-12 col-md-6 col-lg-4'>
-            <Card  className='text-center pb-3 border-3 mt-2'>
+            <Card className='text-center  border-3 mt-2'>
                 <Card.Img className='img' variant="top" src={img} />
                 <Card.Body className='c-body'>
                     <Card.Title className='text-center fs-3'>{name}</Card.Title>
@@ -17,11 +17,9 @@ const Service = ({ service }) => {
                 <Card.Body>
                     <h4 className='text-center fs-3'>Price : ${price}</h4>
                 </Card.Body>
-                <Card.Footer className='bg-white border-0'>
-                   <Link to='/checkout'>
-                   <button className='w-50 border-0 rounded py-2 bg-warning text-white fw-bold'>Book Now</button>   
-                    </Link> 
-                </Card.Footer>
+                <Link to='/checkout'>
+                    <button className='w-100 border-0 rounded py-2 bg-warning text-white fw-bold'>Book Now</button>
+                </Link>
             </Card>
         </div>
     );

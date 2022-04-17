@@ -1,0 +1,22 @@
+ .form-info{
+     border: 1px solid #0DCAF0;
+     width: 100%;
+     background-color: #00AD7F;
+ }
+
+ .form-body{
+    margin: 20px auto;
+    padding: 30px 50px;
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+ }
+
+ .email{
+     border-radius: 20px;
+ }
+
+ button{
+     padding: 5px 60px;
+     border-radius: 20px;
+ }

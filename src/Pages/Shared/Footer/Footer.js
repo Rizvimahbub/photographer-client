@@ -6,7 +6,7 @@ const Footer = () => {
     const date = new Date();
     const year = date.getFullYear();
     return (
-        <div className='d-flex justify-content-around align-items-center mt-5 py-5 bg-dark text-info'>
+        <div className='d-flex justify-content-around align-items-center  py-3 bg-dark text-info'>
             <address>
                 <h5>Nayem Islam</h5>
                 <h6>Address : 24/13, Banani, Dhaka</h6>
