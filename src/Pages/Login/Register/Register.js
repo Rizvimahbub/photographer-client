@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../../Social Login/SocialLogin';
 
@@ -28,6 +28,10 @@ const Register = () => {
         }
     }
 
+    const navigateToLogin = () => {
+        navigate('/login')
+    }
+
     if (user) {
         navigate('/checkout')
     }
@@ -50,9 +54,9 @@ const Register = () => {
                         <input className='email w-100 px-3 py-2 border border-1' type='password' name='password' placeholder='Password'></input><br /><br />
                         <input className='email w-100 px-3 py-2 border border-1' type='password' name='confirmPassword' placeholder='Confirm Password'></input><br /><br />
                         <p><input onClick={() => setAgree(!agree)} type='checkbox'></input> Accept Nayem Photography Terms and Conditions</p><br />
-                        <p className='text-danger'>{errorHandle}{errorPass}</p><br />
+                        <p clas>{errorHandle}{errorPass}</p><br />
                         <button disabled={!agree} className='border-0 bg-info text-white'>Login</button>
-                        <p className='mt-2'>Already have an account? <Link className='text-decoration-none' to='/login'><span>Login</span></Link></p>
+                        <p className='mt-2'>Already have an account? <span onClick={navigateToLogin} className='text-info'>Login</span></p>
                     </form>
                     <SocialLogin></SocialLogin>
                 </div>
