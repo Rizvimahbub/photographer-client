@@ -1,25 +1,7 @@
-.service-info{
-    border: 2px solid rgb(37, 37, 250);
-    padding-bottom: 20px;
-    border-radius: 8px;
-    text-align: center;
+.img{
+    height: 400px;
 }
 
-.service-info img{
-    width: 100%;
-}
-
-.service-info p{
-    font-weight: 500;
-}
-
-
-.service-info button{
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 50px;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    background-color: rgb(37, 37, 250);
+.c-body{
+    min-height: 170px;
 }

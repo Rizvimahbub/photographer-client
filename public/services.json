@@ -1,44 +1,23 @@
 [
     {
         "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "name": "Wedding Photograohy",
+        "price": "500",
+        "description": "Take a look around my site and feel free to snoop around my Instagram feed. It’ll give you a good idea of who I am and what makes me tick. Looking forward to crossing paths and hearing your story!",
+        "img": "https://media.istockphoto.com/photos/happy-wedding-photography-of-bride-and-groom-at-wedding-ceremony-picture-id1190043570?k=20&m=1190043570&s=612x612&w=0&h=4ucKegbD9AHd99kH5uEqrtm5zovyZ6IsYa33hR2pV-k="
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "name": "Birthday Photography",
+        "price": "200",
+        "description": "Photographing a child’s birthday is a great way to remember the child at that point in time. It is amazing how much people change as they grow, and you want to be able to look back years later.Here I am to live your memories.",
+        "img": "https://www.urbunservices.com/wp-content/uploads/2021/06/HealthyBirthday.jpg"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
-        "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
-    },
-    {
-        "id": 4,
-        "name": "BRAKE REPARING",
-        "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
-    },
-    {
-        "id": 5,
-        "name": "WASH AND GLASSING",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
-    },
-    {
-        "id": 6,
-        "name": "COMPLETE ANALYSIS",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
-    }
+        "name": "Fashion Photography",
+        "price": "400",
+        "description": "If you want to change yourself and express yourself as a fashionable model, just check my website.",
+        "img": "https://img.freepik.com/free-photo/magnificent-woman-long-bright-skirt-dancing-studio-carefree-inspired-female-model-posing-with-pleasure-yellow_197531-11084.jpg?w=2000"
+    } 
 ]

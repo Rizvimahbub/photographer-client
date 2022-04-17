@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDEouTualEWSn-EJYpdMiwRYH-ffGLcP7k",
-  authDomain: "genius-car-services-c36b0.firebaseapp.com",
-  projectId: "genius-car-services-c36b0",
-  storageBucket: "genius-car-services-c36b0.appspot.com",
-  messagingSenderId: "714877711994",
-  appId: "1:714877711994:web:6671d6e9216cfa8ce2adc3"
+  apiKey: "AIzaSyAJ2fiOsFCdpWrum23qrDM0dYftKDuDE9Q",
+  authDomain: "nayem-photography.firebaseapp.com",
+  projectId: "nayem-photography",
+  storageBucket: "nayem-photography.appspot.com",
+  messagingSenderId: "554963521663",
+  appId: "1:554963521663:web:76f0389f5066383aafaf4a"
 };
 
 // Initialize Firebase

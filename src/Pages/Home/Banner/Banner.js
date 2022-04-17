@@ -1,57 +1,61 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import Banner1 from '../../../images/banner/banner1.jpg';
-import Banner2 from '../../../images/banner/banner2.jpg';
-import Banner3 from '../../../images/banner/banner3.jpg';
+import Wedding from '../../Images/Banner/Wedding.jpg'
+import Wedding2 from '../../Images/Banner/Wedding2.jpg'
+import Birthday from '../../Images/Banner/Birthday.jpg'
+import Birthday2 from '../../Images/Banner/Birthday2.jpg'
+import Fashion from '../../Images/Banner/Fashion.jpg'
+import Fashion2 from '../../Images/Banner/Fashion2.jpg'
 
 const Banner = () => {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    }
     return (
         <div>
-            <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel fade>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={Banner1}
+                        src={Wedding}
                         alt="First slide"
                     />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={Banner2}
+                        src={Wedding2}
                         alt="Second slide"
                     />
-
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={Banner3}
+                        src={Birthday}
                         alt="Third slide"
                     />
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
-                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={Birthday2}
+                        alt="Fourth slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={Fashion}
+                        alt="Fifth slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={Fashion2}
+                        alt="Sixth slide"
+                    />
                 </Carousel.Item>
             </Carousel>
         </div>
     );
 };
+
 export default Banner;
