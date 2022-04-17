@@ -9,7 +9,7 @@ import Fashion2 from '../../Images/Banner/Fashion2.jpg'
 
 const Banner = () => {
     return (
-        <div>
+        <div id='banner'>
             <Carousel fade>
                 <Carousel.Item>
                     <img
