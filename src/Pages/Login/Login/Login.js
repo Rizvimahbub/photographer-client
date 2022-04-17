@@ -1,9 +1,10 @@
-import React, {  useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './Login.css';
 import {  useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import {  useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Social Login/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 const Login = () => {
 
@@ -12,8 +13,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-    const [signInWithEmailAndPassword, user, error] = useSignInWithEmailAndPassword(auth,{sendEmailVerification:true});
-    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    const [signInWithEmailAndPassword, user, error,loading] = useSignInWithEmailAndPassword(auth,{sendEmailVerification:true});
+    const [sendPasswordResetEmail,sending] = useSendPasswordResetEmail(auth);
        
       
     const handleSignIn = (event) => {
@@ -31,6 +32,10 @@ const Login = () => {
 
     const navigateToRegister = () => {
         navigate('/register')
+    }
+
+    if(loading || sending){
+        return <Loading></Loading>
     }
 
     if (user) {

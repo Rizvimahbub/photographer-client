@@ -4,11 +4,16 @@ import Github from '../Images/github.jpg';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../Shared/Loading/Loading';
 const SocialLogin = () => {
     let errorHandle;
     const navigate = useNavigate();
-    const [signInWithGoogle,googleUser,errorGoogle] = useSignInWithGoogle(auth);
-    const [signInWithGithub,gitUser,errorGit] = useSignInWithGithub(auth);
+    const [signInWithGoogle,googleUser,errorGoogle,googleLoading] = useSignInWithGoogle(auth);
+    const [signInWithGithub,gitUser,errorGit,gitLoading] = useSignInWithGithub(auth);
+
+    if(googleLoading || gitLoading){
+        return <Loading></Loading>
+    }
 
     if(googleUser || gitUser){
         navigate('/home')
