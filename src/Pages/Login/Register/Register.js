@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { useAuthState, useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import {  useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../../Social Login/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
@@ -11,7 +13,7 @@ const Register = () => {
     const [agree, setAgree] = useState(false);
     const [errorPass, setErrorPass] = useState();
     const navigate = useNavigate();
-    const [createUserWithEmailAndPassword,user,error,loading] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+    const [createUserWithEmailAndPassword,error,loading] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const handleCreateUser = async (event) => {
@@ -22,16 +24,12 @@ const Register = () => {
         const confirmPassword = event.target.confirmPassword.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName : name});
-        alert('Updated profile');
+        toast('Updated profile');
         navigate('/home')
 
         if (password !== confirmPassword) {
             setErrorPass('Passwords did not match')
         }
-    }
-
-    if(user){
-        console.log(user,'user')
     }
 
 
@@ -68,6 +66,7 @@ const Register = () => {
                         <p className='mt-2'>Already have an account? <span onClick={navigateToLogin} className='text-info'>Login</span></p>
                     </form>
                     <SocialLogin></SocialLogin>
+                    <ToastContainer />
                 </div>
 
             </div>

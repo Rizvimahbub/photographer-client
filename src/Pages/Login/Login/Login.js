@@ -1,10 +1,12 @@
 import React, { useRef } from 'react';
 import './Login.css';
-import {  useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import {  useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Social Login/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -13,10 +15,10 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-    const [signInWithEmailAndPassword, user, error,loading] = useSignInWithEmailAndPassword(auth,{sendEmailVerification:true});
-    const [sendPasswordResetEmail,sending] = useSendPasswordResetEmail(auth);
-       
-      
+    const [signInWithEmailAndPassword, user, error, loading] = useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+
     const handleSignIn = (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
@@ -26,15 +28,20 @@ const Login = () => {
 
     const passwordResetEmail = async () => {
         const email = emailRef.current.value;
-        await sendPasswordResetEmail(email);
-        alert('Sent email');
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('Please type your email');
+        }
     }
 
     const navigateToRegister = () => {
         navigate('/register')
     }
 
-    if(loading || sending){
+    if (loading || sending) {
         return <Loading></Loading>
     }
 
@@ -61,6 +68,7 @@ const Login = () => {
                 <div>{errorHandle}</div>
                 <p className='mt-2'>New to Nayem Photography? <span className='text-info' onClick={navigateToRegister}>Register</span></p>
                 <SocialLogin></SocialLogin>
+                <ToastContainer />
             </div>
 
         </div>
