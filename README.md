@@ -4,8 +4,6 @@
 ## Live website link
 https://nayem-photography.web.app/
 
-In the project directory, you can run:
-
 ### Home page
 I am a photographer and I have described my services here.
 
