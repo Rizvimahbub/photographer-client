@@ -12,6 +12,7 @@ import Services from './Pages/Home/Services/Services';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Register from './Pages/Login/Register/Register';
 import NotFound from './Pages/Shared/Not Found/NotFound';
+import FinalPage from './Pages/FinalPage/FinalPage';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         }></Route>
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/finalPage' element={<FinalPage></FinalPage>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
